@@ -1,0 +1,21 @@
+{
+  "scope": "In-memory DOM regression for field identity, demo values, and summary routing. Not a browser layout test.",
+  "passed": 2,
+  "total": 2,
+  "results": [
+    {
+      "name": "incomplete answer",
+      "expected": "revise",
+      "actual": "revise",
+      "sourcePreserved": true,
+      "passed": true
+    },
+    {
+      "name": "supported draft",
+      "expected": "reviewed",
+      "actual": "reviewed",
+      "sourcePreserved": true,
+      "passed": true
+    }
+  ]
+}

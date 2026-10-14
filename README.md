@@ -6,7 +6,7 @@ Checkup helps a reviewer compare an AI answer with the original task and availab
 
 ## Try it
 
-Open `index.html` in a browser, or use the GitHub Pages demo once enabled. Choose either fictional example to inspect the workflow, then change the judgments and generate a summary. You can also enter your own approved, non-sensitive material.
+[Try the live demo](https://yay-fun.github.io/ai-answer-checkup/), or open `index.html` in a browser. Choose either fictional example to inspect the workflow, then change the judgments and generate a summary. You can also enter your own approved, non-sensitive material.
 
 ## What it checks
 
@@ -35,9 +35,12 @@ With Node.js installed, run from the repository root:
 ```sh
 node test_review.cjs
 node test_fixtures.cjs
+node test_demo.cjs
 ```
 
 The first script checks 12 routing scenarios, JavaScript syntax, and three static source properties. The second checks routing for eight predefined reference-rating sets. These are not live-model accuracy results or independent annotation agreement measurements.
+
+The demo regression check verifies that example judgments remain separate from source notes.
 
 The `fixtures` directory contains fictional tasks, source records, candidate answers, reference judgments, and rationales. The `results` directory preserves the recorded routing results.
 
