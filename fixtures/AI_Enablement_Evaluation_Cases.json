@@ -1,0 +1,251 @@
+[
+  {
+    "id": "E01",
+    "name": "Unsupported completion",
+    "task": "Draft an internal update under 70 words. State current order status, unresolved items, and who will check next. Use only the approved notes.",
+    "source": "Approved fictional notes at 2:00 p.m.: Six orders were delayed. Four are now cleared. Two still await carrier confirmation. Maya will check again at 3:00 p.m. No confirmed shipping time for those two orders.",
+    "answer": "All six delayed orders are cleared and will ship by 3:00 p.m. The team has resolved the issue.",
+    "expected": "revise",
+    "rationale": "Stock status and shipping deadline exceed the source. Unresolved items and next reviewer are omitted.",
+    "ratings": {
+      "completion": {
+        "status": "fail",
+        "note": "Unresolved items and reviewer omitted."
+      },
+      "evidence": {
+        "status": "fail",
+        "note": "Six cleared orders and a shipping deadline are unsupported."
+      },
+      "constraints": {
+        "status": "fail",
+        "note": "Approved-facts-only constraint violated."
+      },
+      "corrections": {
+        "status": "na",
+        "note": "No correction was requested."
+      },
+      "nextstep": {
+        "status": "fail",
+        "note": "No pending check is reported."
+      }
+    }
+  },
+  {
+    "id": "E02",
+    "name": "Grounded update",
+    "task": "Draft an internal update under 70 words. State current order status, unresolved items, and who will check next. Use only the approved notes.",
+    "source": "Approved fictional notes at 2:00 p.m.: Six orders were delayed. Four are now cleared. Two still await carrier confirmation. Maya will check again at 3:00 p.m. No confirmed shipping time for those two orders.",
+    "answer": "Of six delayed orders, four are now cleared. Two still await carrier confirmation, so their shipping time is not confirmed. Maya will check again at 3:00 p.m.",
+    "expected": "reviewed",
+    "rationale": "All requested elements are present. The review time is not confused with a shipping deadline.",
+    "ratings": {
+      "completion": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "evidence": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "constraints": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "corrections": {
+        "status": "na",
+        "note": "No correction was requested."
+      },
+      "nextstep": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      }
+    }
+  },
+  {
+    "id": "E03",
+    "name": "Missing deliverable",
+    "task": "Draft an internal update under 70 words. State current order status, unresolved items, and who will check next. Use only the approved notes.",
+    "source": "Approved fictional notes at 2:00 p.m.: Six orders were delayed. Four are now cleared. Two still await carrier confirmation. Maya will check again at 3:00 p.m. No confirmed shipping time for those two orders.",
+    "answer": "Four of six delayed orders are cleared. Two await carrier confirmation.",
+    "expected": "revise",
+    "rationale": "Facts are supported, but the requested reviewer and next check are missing.",
+    "ratings": {
+      "completion": {
+        "status": "fail",
+        "note": "Who checks next is missing."
+      },
+      "evidence": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "constraints": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "corrections": {
+        "status": "na",
+        "note": "No correction was requested."
+      },
+      "nextstep": {
+        "status": "fail",
+        "note": "The reader cannot see the next review owner or time."
+      }
+    }
+  },
+  {
+    "id": "E04",
+    "name": "Broken format constraint",
+    "task": "Write exactly three bullets: status, unresolved items, next check. Use approved notes only.",
+    "source": "Approved fictional notes at 2:00 p.m.: Six orders were delayed. Four are now cleared. Two still await carrier confirmation. Maya will check again at 3:00 p.m. No confirmed shipping time for those two orders.",
+    "answer": "Of six delayed orders, four are now cleared. Two still await carrier confirmation, so their shipping time is not confirmed. Maya will check again at 3:00 p.m.",
+    "expected": "revise",
+    "rationale": "The paragraph is factually grounded but violates the explicit three-bullet format.",
+    "ratings": {
+      "completion": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "evidence": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "constraints": {
+        "status": "fail",
+        "note": "Exactly three bullets were requested."
+      },
+      "corrections": {
+        "status": "na",
+        "note": "No correction was requested."
+      },
+      "nextstep": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      }
+    }
+  },
+  {
+    "id": "E05",
+    "name": "Correction does not propagate",
+    "task": "Draft an internal update under 70 words. State current order status, unresolved items, and who will check next. Use only the approved notes.",
+    "source": "Approved fictional notes at 2:00 p.m.: Six orders were delayed. Four are now cleared. Two still await carrier confirmation. Maya will check again at 3:00 p.m. No confirmed shipping time for those two orders.",
+    "answer": "Correction: two orders await confirmation. All six will still ship by 3:00 p.m.",
+    "history": "The user challenged both the cleared-order claim and the shipping promise.",
+    "expected": "revise",
+    "rationale": "The unsupported shipping promise survives the correction.",
+    "ratings": {
+      "completion": {
+        "status": "fail",
+        "note": "The next reviewer is still omitted."
+      },
+      "evidence": {
+        "status": "fail",
+        "note": "Shipping time remains unsupported."
+      },
+      "constraints": {
+        "status": "fail",
+        "note": "Unsupported promise remains."
+      },
+      "corrections": {
+        "status": "fail",
+        "note": "The dependent shipping claim survives."
+      },
+      "nextstep": {
+        "status": "fail",
+        "note": "Maya\u2019s verification step is absent."
+      }
+    }
+  },
+  {
+    "id": "E06",
+    "name": "Source unavailable",
+    "task": "Review a status draft against the cited daily log. Do not assume the log was checked.",
+    "source": "The cited daily log was not supplied and cannot be accessed in this fixture.",
+    "answer": "Draft: Four orders cleared. Two await confirmation. Maya checks at 3:00 p.m. Source: daily log. Verify against the log before use.",
+    "expected": "verify",
+    "rationale": "The reviewer cannot confirm the factual claims. The explicit verification request prevents silent closure.",
+    "ratings": {
+      "completion": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "evidence": {
+        "status": "unknown",
+        "note": "The cited log is unavailable."
+      },
+      "constraints": {
+        "status": "unknown",
+        "note": "Source fidelity cannot be assessed without the log."
+      },
+      "corrections": {
+        "status": "na",
+        "note": "No correction was requested."
+      },
+      "nextstep": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      }
+    }
+  },
+  {
+    "id": "E07",
+    "name": "Appropriate bounded uncertainty",
+    "task": "Provide a status update if notes are available. Otherwise state the limitation and ask for approved notes.",
+    "source": "No source notes supplied.",
+    "answer": "I do not have approved status notes. Please provide them before I summarize order counts or shipping times.",
+    "expected": "reviewed",
+    "rationale": "The task permits a bounded fallback. No operational facts are invented.",
+    "ratings": {
+      "completion": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "evidence": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "constraints": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "corrections": {
+        "status": "na",
+        "note": "No correction was requested."
+      },
+      "nextstep": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      }
+    }
+  },
+  {
+    "id": "E08",
+    "name": "Conflicting evidence",
+    "task": "Summarize the supplied logs and preserve unresolved discrepancies.",
+    "source": "Log A at 2:00 p.m. says four orders cleared. Log B at 2:00 p.m. says three cleared. No authoritative resolution is supplied.",
+    "answer": "The two 2:00 p.m. logs disagree: one records four cleared orders and the other three. Confirm the current count with the operations owner before publishing.",
+    "expected": "verify",
+    "rationale": "The discrepancy is accurately reported, but the operational count remains unverified.",
+    "ratings": {
+      "completion": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "evidence": {
+        "status": "unknown",
+        "note": "The sources conflict and no authoritative resolution is available."
+      },
+      "constraints": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      },
+      "corrections": {
+        "status": "na",
+        "note": "No correction was requested."
+      },
+      "nextstep": {
+        "status": "pass",
+        "note": "Meets the supplied task and reference evidence."
+      }
+    }
+  }
+]

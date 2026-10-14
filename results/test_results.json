@@ -1,0 +1,80 @@
+{
+  "scope": "Pure decision logic and static source assertions. No browser interaction or external LLM benchmark.",
+  "passed": 12,
+  "total": 12,
+  "sourceAssertions": 3,
+  "results": [
+    {
+      "name": "all applicable pass",
+      "expected": "reviewed",
+      "actual": "reviewed",
+      "passed": true
+    },
+    {
+      "name": "failure overrides unresolved evidence",
+      "expected": "revise",
+      "actual": "revise",
+      "passed": true
+    },
+    {
+      "name": "unknown claim support",
+      "expected": "verify",
+      "actual": "verify",
+      "passed": true
+    },
+    {
+      "name": "blank check",
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "passed": true
+    },
+    {
+      "name": "pass without note",
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "passed": true
+    },
+    {
+      "name": "fail without note",
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "passed": true
+    },
+    {
+      "name": "no correction applicable",
+      "expected": "reviewed",
+      "actual": "reviewed",
+      "passed": true
+    },
+    {
+      "name": "not applicable without reason",
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "passed": true
+    },
+    {
+      "name": "all not applicable",
+      "expected": "no-scope",
+      "actual": "no-scope",
+      "passed": true
+    },
+    {
+      "name": "invalid status",
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "passed": true
+    },
+    {
+      "name": "missing records",
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "passed": true
+    },
+    {
+      "name": "correction leaves dependent claim",
+      "expected": "revise",
+      "actual": "revise",
+      "passed": true
+    }
+  ]
+}

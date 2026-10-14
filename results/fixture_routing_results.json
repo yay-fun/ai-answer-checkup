@@ -1,0 +1,55 @@
+{
+  "scope": "Routing of predefined reference judgments. Not live-model performance.",
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "id": "E01",
+      "expected": "revise",
+      "actual": "revise",
+      "passed": true
+    },
+    {
+      "id": "E02",
+      "expected": "reviewed",
+      "actual": "reviewed",
+      "passed": true
+    },
+    {
+      "id": "E03",
+      "expected": "revise",
+      "actual": "revise",
+      "passed": true
+    },
+    {
+      "id": "E04",
+      "expected": "revise",
+      "actual": "revise",
+      "passed": true
+    },
+    {
+      "id": "E05",
+      "expected": "revise",
+      "actual": "revise",
+      "passed": true
+    },
+    {
+      "id": "E06",
+      "expected": "verify",
+      "actual": "verify",
+      "passed": true
+    },
+    {
+      "id": "E07",
+      "expected": "reviewed",
+      "actual": "reviewed",
+      "passed": true
+    },
+    {
+      "id": "E08",
+      "expected": "verify",
+      "actual": "verify",
+      "passed": true
+    }
+  ]
+}
