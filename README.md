@@ -1,8 +1,8 @@
-# AI Answer Checkup
+# AI Answer Review
 
-A small, guided human review tool by Suzanne Hansen at Suzanne's Lab.
+A standalone, guided human review tool by Suzanne Hansen at Suzanne's Lab.
 
-Checkup helps a reviewer compare an AI answer with the original task and available evidence. It turns five recorded judgments into a review summary with unresolved items and next steps.
+AI Answer Review helps a reviewer compare an AI answer with the original task and available evidence. It turns five recorded judgments into a review summary with unresolved items and next steps.
 
 ## Try it
 
@@ -20,7 +20,7 @@ The reviewer selects Pass, Fail, Unverified, or Not applicable and records the s
 
 ## Why I made this
 
-My independent AI research examines the gap between a convincing answer and completed, supported work. Checkup translates those distinctions into a practical review activity. It is an application prototype and portfolio demonstration, not a production enterprise deployment.
+My independent AI research examines the gap between a convincing answer and completed, supported work. AI Answer Review translates those distinctions into a practical review activity. It is an application prototype and portfolio demonstration, not a production enterprise deployment.
 
 ## Privacy and limits
 
